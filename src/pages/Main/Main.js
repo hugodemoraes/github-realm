@@ -61,8 +61,8 @@ export default function Main() {
     }
   }
 
-  async function handleRefreshRepository({ fullNameRepository }) {
-    const { data } = await api.get(`/repos/${fullNameRepository}`);
+  async function handleRefreshRepository({ fullName }) {
+    const { data } = await api.get(`/repos/${fullName}`);
 
     const newRepo = await saveRepository(data);
 
